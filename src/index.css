@@ -142,3 +142,52 @@
   color: #333;
   background-color: transparent;
 }
+
+/* Horserace Leaderboard Styling */
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  font-family: "Arial", sans-serif;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: #f9f3e9; /* Light beige background */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #8b0000; /* Dark red header */
+  color: #ffffff;
+}
+
+th {
+  padding: 12px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+  transition: background-color 0.3s;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f5ebe0;
+}
+
+td {
+  padding: 12px 15px;
+}
+
+/* Style for the horse name column */
+td:first-child {
+  font-weight: bold;
+}
+
+/* Style for speed column */
+td:nth-child(3) {
+  text-align: right;
+}

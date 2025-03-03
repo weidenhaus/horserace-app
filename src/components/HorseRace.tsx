@@ -18,7 +18,7 @@ const HorseRace: React.FC = () => {
   );
   const [raceLength, setRaceLength] = useState(1000);
   const [connected, setConnected] = useState(false);
-  const [rawData, setRawData] = useState("");
+  const [rawData, setRawData] = useState<any[]>([]);
   const eventSourceRef = useRef<EventSource | null>(null);
 
   useEffect(() => {
@@ -134,10 +134,28 @@ const HorseRace: React.FC = () => {
       >
         {raceInProgress ? "Race in progress..." : "Start Race"}
       </button>
-      <fieldset className="json-container">
-        <legend>Raw data</legend>
-        <pre id="json-display">{JSON.stringify(rawData, null, 2)}</pre>
-      </fieldset>
+
+      {rawData.length > 0 && (
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Speed</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rawData &&
+              rawData.map((horse: Horse) => (
+                <tr key={horse.id}>
+                  <td>{horse.name}</td>
+                  <td>{horse.position}</td>
+                  <td>{horse.speed}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };
