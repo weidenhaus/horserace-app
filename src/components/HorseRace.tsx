@@ -100,6 +100,9 @@ const HorseRace: React.FC = () => {
         Each horse has a random speed and the first to reach the finish line
         wins.
       </p>
+      <a href="https://github.com/weidenhaus/horserace">
+        Check out the code on GitHub
+      </a>
       <div className="connection-status">
         {connected ? "🟢 Connected" : "🔴 Disconnected"}
       </div>
