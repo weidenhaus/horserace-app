@@ -93,7 +93,7 @@ const HorseRace: React.FC = () => {
     <div className="horse-race-container">
       <h1>Virtual Horse Racing</h1>
       <p>
-        Tech demo for SSE (Server side events) by Steffen Weidenhaus. Make sure
+        Tech demo for SSE (Server-Sent Events) by Steffen Weidenhaus. Make sure
         to open it in several browser sessions at once.
       </p>
       <p>
