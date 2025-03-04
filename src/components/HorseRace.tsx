@@ -92,7 +92,14 @@ const HorseRace: React.FC = () => {
   return (
     <div className="horse-race-container">
       <h1>Virtual Horse Racing</h1>
-      <p>Tech demo for SSE (Server side events) by Steffen Weidenhaus</p>
+      <p>
+        Tech demo for SSE (Server side events) by Steffen Weidenhaus. Make sure
+        to open it in several browser sessions at once.
+      </p>
+      <p>
+        Each horse has a random speed and the first to reach the finish line
+        wins.
+      </p>
       <div className="connection-status">
         {connected ? "🟢 Connected" : "🔴 Disconnected"}
       </div>
